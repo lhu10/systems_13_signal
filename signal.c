@@ -8,7 +8,7 @@
 static void int_handler(int signo){
     if(signo == SIGINT){
         int fd, result; 
-        char msg[] = "Program Exited due to SIGINT\n");
+        char msg[] = "Program Exited due to SIGINT";
         fd = open("output.txt", O_APPEND | O_WRONLY | O_CREAT, 0644);
         if(fd == -1){
             printf("Error %d: %s\n", errno, strerror(errno));
